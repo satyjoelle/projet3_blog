@@ -1,8 +1,8 @@
 <?php
 
-require_once './Controllers/ControllerAccueil.php';
-require_once './Controllers/ControllerBillet.php';
-require_once './Views/Vue.php';
+require_once 'Frontend/controllers/ControllerAccueil.php';
+require_once 'Frontend/controllers/ControllerBillet.php';
+require_once 'Frontend/Views/Vue.php';
 
 class Router {
 
@@ -27,8 +27,15 @@ class Router {
                         else
                             throw new Exception("Identifiant de billet non valide");
                     }
+
                     else
                         throw new Exception("Identifiant de billet non défini");
+                }
+                else if ($_GET['action'] == 'commenter') {
+                    $author = $this->getParametre($_POST, 'author');
+                    $comment = $this->getParametre($_POST, 'comment');
+                    $idBillet = $this->getParametre($_POST, 'idBillet');
+                    $this->ctrlBillet->commenter($author, $comment, $idBillet);
                 }
                 else
                     throw new Exception("Action non valide");
@@ -38,6 +45,8 @@ class Router {
             }
         }
         catch (Exception $e) {
+           // echo $e->getLine();
+           // echo $e->getFile();
             $this->erreur($e->getMessage());
         }
     }
@@ -46,5 +55,14 @@ class Router {
     private function erreur($msgErreur) {
         $vue = new Vue("Erreur");
         $vue->generer(array('msgErreur' => $msgErreur));
+    }
+
+    // Recherche un paramètre dans un tableau
+    private function getParametre($tableau, $nom) {
+        if (isset($tableau[$nom])) {
+            return $tableau[$nom];
+        }
+        else
+            throw new Exception("Paramètre '$nom' absent");
     }
 }
