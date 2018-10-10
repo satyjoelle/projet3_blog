@@ -1,17 +1,22 @@
 <?php
 
+//require_once 'Backend/controllers/ControllerAdmin.php';
 require_once 'Frontend/controllers/ControllerAccueil.php';
 require_once 'Frontend/controllers/ControllerBillet.php';
 require_once 'Frontend/Views/Vue.php';
+//require_once 'Backend/Views/Vue.php';
+
 
 class Router {
 
     private $ctrlAccueil;
     private $ctrlBillet;
+    private $ctrlAdmin;
 
     public function __construct() {
         $this->ctrlAccueil = new ControllerAccueil();
         $this->ctrlBillet = new ControllerBillet();
+        //$this->ctrlAdmin = new \Backend\ControllerAdmin();
     }
 
     // Traite une requête entrante
@@ -36,6 +41,9 @@ class Router {
                     $comment = $this->getParametre($_POST, 'comment');
                     $idBillet = $this->getParametre($_POST, 'idBillet');
                     $this->ctrlBillet->commenter($author, $comment, $idBillet);
+                }
+                else if($_GET['action']=='admin'){
+                    //$this->ctrlAdmin->admin();
                 }
                 else
                     throw new Exception("Action non valide");
