@@ -6,8 +6,8 @@
  * Time: 16:21
  */
 
-require_once 'app/Manager.php';
-require_once 'app/Billet.php';
+require_once 'models/Manager.php';
+require_once 'models/Billet.php';
 class BilletManager extends Manager
 {
 
@@ -39,11 +39,10 @@ class BilletManager extends Manager
 
     public function addBillet(Billet $billet)
     {
-        $q = $this->db->prepare('INSERT INTO billets (title, post, date_created) VALUES(:title, :post, :date_created)');
+        $q = $this->db->prepare('INSERT INTO billets (title, post, date_created) VALUES(:title, :post, NOW())');
 
         $q->bindValue(':title', $billet->getTitle());
         $q->bindValue(':post', $billet->getPost());
-        $q->bindValue(':date_created', $billet->getDateCreated());
 
         $q->execute();
 
@@ -63,9 +62,9 @@ class BilletManager extends Manager
         $q->execute();
     }
 
-    public function deleteBillet(Billet $billet)
+    public function deleteBillet($idBillet)
     {
-        $q = $this->db->prepare('DELETE FROM billets WHERE id=' . $billet->id());
+        $q = $this->db->prepare('DELETE FROM billets WHERE id=' . $idBillet);
         $q->execute();
     }
 

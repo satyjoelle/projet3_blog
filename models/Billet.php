@@ -15,10 +15,9 @@ Class Billet extends Entity {
 
 
 
-    /*public function __construct($datas=null)
+    public function __construct($datas=null)
     {
-
-       if($datas != null) {
+           if($datas != null) {
            parent::__construct($datas);
        }
     }

@@ -1,9 +1,9 @@
 <?php
 
-require_once 'Frontend/Models/BilletManager.php';
-require_once 'Frontend/Models/CommentaireManager.php';
-require_once 'app/Commentaire.php';
-require_once 'app/Vue.php';
+require_once 'models/BilletManager.php';
+require_once 'models/CommentaireManager.php';
+require_once 'models/Commentaire.php';
+require_once 'Views/frontend/Vue.php';
 
 class ControllerBillet{
 
@@ -37,7 +37,10 @@ class ControllerBillet{
         $this->commentaireManager->addComment($commentaire);
 
         //actualisation de l'affichage du billet
-        $this->billet($idBillet);
+        header('location:index.php?action=billet&id='+$idBillet);
+
+
+
     }
 
 

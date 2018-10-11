@@ -6,27 +6,24 @@
  * Time: 22:39
  */
 
-class Vue {
+class ViewsManager {
 
     private $fichier;
+   // private $fichier2;
     private $title;
 
     public function __construct($action) {
 
-        if(isset($_GET['action']) && $_GET['action']=='admin')
-        {
-            $this->fichier = "Backend/Views/vue" . $action . ".php";
-        }else{
-            $this->fichier = "Frontend/Views/vue" . $action . ".php";
+            $this->fichier = "views/backend/vue" . $action . ".php";
 
-        }
+
     }
 
 
     // Génère et affiche la vue
     public function generer($donnees) {
         $contenu = $this->genererFichier($this->fichier, $donnees);
-        $vue = $this->genererFichier('app/Template.php',
+        $vue = $this->genererFichier('views/backend/TemplateBackend.php',
             array('title' => $this->title, 'contenu' => $contenu));
         echo $vue;
     }

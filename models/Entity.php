@@ -11,11 +11,11 @@ abstract class Entity
 
     protected $id;
 
-    /*public function __construct($datas=null)
+    public function __construct($datas=null)
     {
         $this->hydrate($datas);
     }
-    */
+
     /** @param array $donnees
     * @return void
     */

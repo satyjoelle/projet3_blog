@@ -6,8 +6,8 @@
  * Time: 16:44
  */
 
-require_once 'app/Manager.php';
-require_once 'app/Commentaire.php';
+require_once 'models/Manager.php';
+require_once 'models/Commentaire.php';
 class CommentaireManager extends Manager
 
 {

@@ -1,9 +1,10 @@
 <?php
 
-require_once 'Backend/controllers/ControllerAdmin.php';
-require_once 'Frontend/controllers/ControllerAccueil.php';
-require_once 'Frontend/controllers/ControllerBillet.php';
-require_once 'Vue.php';
+require_once 'controllers/backend/ControllerAdmin.php';
+require_once 'controllers/frontend/ControllerAccueil.php';
+require_once 'controllers/frontend/ControllerBillet.php';
+require_once 'Views/frontend/Vue.php';
+require_once 'Views/backend/ViewsManager.php';
 //require_once 'Backend/Views/Vue.php';
 
 
@@ -45,6 +46,32 @@ class Router {
                 else if($_GET['action']=='admin'){
                     $this->ctrlAdmin->admin();
                 }
+                else if($_GET['action']=='addForm'){
+                    $this->ctrlAdmin->addForm();
+                }
+                else if($_GET['action']=='delete'){
+                    if (isset($_GET['id'])) {
+                        $idBillet = intval($_GET['id']);
+                        if ($idBillet != 0) {
+                            $this->ctrlAdmin->delete($idBillet);
+
+                        }
+                        else
+                            throw new Exception("Identifiant de billet non valide");
+                    }
+                }
+                else if($_GET['action']=='edit'){
+                    if (isset($_GET['id'])) {
+                        $idBillet = intval($_GET['id']);
+                        if ($idBillet != 0) {
+                            $this->ctrlAdmin->edit($idBillet);
+
+                        }
+                        else
+                            throw new Exception("Identifiant de billet non valide");
+                    }
+                }
+
                 else
                     throw new Exception("Action non valide");
             }
@@ -55,6 +82,7 @@ class Router {
         catch (Exception $e) {
             echo $e->getLine();
             echo $e->getFile();
+            //echo $e->getCode();
             $this->erreur($e->getMessage());
             //echo $_GET['action'];
         }
