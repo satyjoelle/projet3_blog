@@ -6,9 +6,9 @@
  * Time: 16:44
  */
 
-//require_once 'FrontManager.phpr.php';
-require_once 'commentaire.php';
-class CommentaireManager extends FrontManager
+require_once 'app/Manager.php';
+require_once 'app/Commentaire.php';
+class CommentaireManager extends Manager
 
 {
     public function getComments($idBillet)

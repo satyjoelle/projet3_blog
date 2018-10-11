@@ -12,15 +12,21 @@ class Vue {
     private $title;
 
     public function __construct($action) {
-        $this->fichier = "Frontend/Views/vue" . $action . ".php";
 
+        if(isset($_GET['action']) && $_GET['action']=='admin')
+        {
+            $this->fichier = "Backend/Views/vue" . $action . ".php";
+        }else{
+            $this->fichier = "Frontend/Views/vue" . $action . ".php";
+
+        }
     }
 
 
     // Génère et affiche la vue
     public function generer($donnees) {
         $contenu = $this->genererFichier($this->fichier, $donnees);
-        $vue = $this->genererFichier('Frontend/Views/Template.php',
+        $vue = $this->genererFichier('app/Template.php',
             array('title' => $this->title, 'contenu' => $contenu));
         echo $vue;
     }

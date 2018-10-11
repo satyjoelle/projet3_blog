@@ -2,8 +2,8 @@
 
 require_once 'Frontend/Models/BilletManager.php';
 require_once 'Frontend/Models/CommentaireManager.php';
-require_once 'Frontend/Models/Commentaire.php';
-require_once 'Frontend/Views/Vue.php';
+require_once 'app/Commentaire.php';
+require_once 'app/Vue.php';
 
 class ControllerBillet{
 

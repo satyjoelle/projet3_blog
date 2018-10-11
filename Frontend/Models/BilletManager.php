@@ -6,9 +6,9 @@
  * Time: 16:21
  */
 
-require_once 'FrontManager.php';
-require_once 'Billet.php';
-class BilletManager extends FrontManager
+require_once 'app/Manager.php';
+require_once 'app/Billet.php';
+class BilletManager extends Manager
 {
 
     //renvoie la liste des billets du blog

@@ -1,6 +1,6 @@
 <?php
 
-class UserFrontManager extends FrontManager
+class UserManager extends Manager
 
 {
    /* public function exists($id)
