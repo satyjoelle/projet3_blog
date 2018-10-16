@@ -3,8 +3,10 @@
 require_once 'controllers/backend/ControllerAdmin.php';
 require_once 'controllers/frontend/ControllerAccueil.php';
 require_once 'controllers/frontend/ControllerBillet.php';
+require_once 'controllers/backend/ControllerUser.php';
 require_once 'Views/frontend/Vue.php';
 require_once 'Views/backend/ViewsManager.php';
+require_once 'Views/backend/vueUser.php';
 //require_once 'Backend/Views/Vue.php';
 
 
@@ -13,11 +15,13 @@ class Router {
     private $ctrlAccueil;
     private $ctrlBillet;
     private $ctrlAdmin;
+    private $ctrlUser;
 
     public function __construct() {
         $this->ctrlAccueil = new ControllerAccueil();
         $this->ctrlBillet = new ControllerBillet();
         $this->ctrlAdmin = new ControllerAdmin();
+        $this->ctrlUser = new ControllerUser();
     }
 
     // Traite une requête entrante
@@ -49,13 +53,14 @@ class Router {
                 else if($_GET['action']=='addForm'){
                     $this->ctrlAdmin->addForm();
                 }
+
                 else if($_GET['action']=='delete'){
                     if (isset($_GET['id'])) {
                         $idBillet = intval($_GET['id']);
                         if ($idBillet != 0) {
                             $this->ctrlAdmin->delete($idBillet);
-
                         }
+
                         else
                             throw new Exception("Identifiant de billet non valide");
                     }
@@ -65,8 +70,19 @@ class Router {
                         $idBillet = intval($_GET['id']);
                         if ($idBillet != 0) {
                             $this->ctrlAdmin->edit($idBillet);
-
                         }
+
+                        //connexion
+                        elseif ($_GET['action']=='InsertUser'){
+                            if (isset($_GET['User'])){
+                                $User =intval($_GET['user']);
+                                if ($User !=0){
+                                    $this->ctrlUser->InsertUser($User);
+                                }
+                            }
+                        }
+
+
                         else
                             throw new Exception("Identifiant de billet non valide");
                     }

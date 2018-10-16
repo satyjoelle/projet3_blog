@@ -18,15 +18,40 @@ class ControllerAdmin {
         $vue->generer(array('billets' => $billets));
     }
 
-    public function edit($idBillet) {
-        $billet = $this->billetManager->getBillet($idBillet);
-        $vue = new ViewsManager("edit", "Afficher un billet");
-        $vue->generer(array('billet' => $billet));
+
+
+    public function edit($idBillet)
+
+    {
+
+        if (isset($_POST ['submit'])){
+
+            $billet = new Billet(['title' => null, 'post' => null]);
+
+            //var_dump($_POST);
+            $billet->setTitle($_POST['title']);
+            $billet->setPost($_POST['post']);
+
+            $this->billetManager->edit($billet, $idBillet);
+
+            header('location: index.php?action=admin');
+
+
+        }else {
+            $billet=$this->billetManager->getBillet($idBillet);
+            $vue = new ViewsManager("edit", "Afficher un billet");
+            $vue->generer(array('billet' => $billet));
+        }
+
+
+
+        //sauvegarde du billet
     }
+
 
     public function addForm() {
         if(isset($_POST['submit'])) {
-            //var_dump($_POST);
+            var_dump($_POST);
             $title = $_POST['title'];
             $post = $_POST['post'];
             $billet = new Billet(['title' => $title, 'post' => $post]);
@@ -43,30 +68,15 @@ class ControllerAdmin {
     }
 
     public function delete($idBillet) {
-        $billets = $this->billetManager->deleteBillet($idBillet);
+        $this->billetManager->deleteBillet($idBillet);
         header('Location:index.php?action=admin');
     }
 
 
-    public function login()
-    {
-        // Vérification du couple user/mdp
-        // Si c'est ok, alos on démarre les sessions
-        // Si c'est pas ok, on redirge vers la page de connexion
 
-        if(1==1) // si couplage ok
-        {
-            $_SESSION['auth'] == true;
-            header('location : index.php?action=admin');
-        }
 
-    }
 
-   public function logout()
-    {
-        // Si tulisateur connecté
-        session_destroy();
-        header('location:index.php');
-    }
+
+
 }
 

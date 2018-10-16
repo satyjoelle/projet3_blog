@@ -50,14 +50,13 @@ class BilletManager extends Manager
 
     //Mise à jour de billets
 
-    public function updateBillet(Billet $billet)
+    public function edit(Billet $billet, $idBillet)
     {
-        $q = $this->db->prepare('UPDATE billets SET title = :title, post = :post, date_created = :date_created WHERE id = :id');
+        $q = $this->db->prepare('UPDATE billets SET title = :title, post = :post WHERE id = :id');
 
-        $q->bindValue(':title', $billet->title(), PDO::PARAM_STR);
-        $q->bindValue(':post', $billet->post(), PDO::PARAM_STR);
-        $q->bindValue(':date_created', $billet->date_created(), PDO::PARAM_STR);
-        $q->bindValue(':id', $billet->id(), PDO::PARAM_INT);
+        $q->bindValue(':title', $billet->getTitle(), PDO::PARAM_STR);
+        $q->bindValue(':post', $billet->getPost(), PDO::PARAM_STR);
+        $q->bindValue(':id', $idBillet, PDO::PARAM_INT);
 
         $q->execute();
     }

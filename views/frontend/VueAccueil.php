@@ -1,5 +1,5 @@
 
-<?php var_dump($billets); ?>
+<?php ($billets); ?>
 <?php foreach ($billets as $billet): ?>
     <article>
         <header>

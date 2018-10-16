@@ -2,7 +2,7 @@
 
 <h2>Formulaire d'ajout de billet </h2>
 <p></p>
-<form action="" method="post">
+<form action="index.php?action=addForm" method="post">
     <div class="form-group">
         <label for="title">Titre:</label>
         <input type="text" class="form-control" id="title" name="title" placeholder="Votre Titre">

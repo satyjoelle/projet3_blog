@@ -1,6 +1,8 @@
 <?php
 //require_once 'Frontend/Views/Vue.php';
 //require_once 'Backend/Views/ViewsManager.php';
+//require_once 'frontend/vueUser.php';
+
 ?>
 <!doctype html>
 <html lang="fr" >
@@ -14,6 +16,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="Contenu/style.css" />
     <title> <?= $title ?> </title>
+
+
+
 </head>
 
 <body>
