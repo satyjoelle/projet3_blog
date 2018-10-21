@@ -31,8 +31,9 @@ public function addComment(Commentaire $commentaire)
         $req->execute(array($commentaire->getAuthor(), $commentaire->getComment(), (int)$commentaire->getIdBillet()));
 
 
-
     }
+
+
 
 
 

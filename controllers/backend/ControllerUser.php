@@ -1,42 +1,52 @@
 <?php
+//session_start();
 require_once 'models/UserManager.php';
-//require_once 'views/backend/UserManager.php';
 require_once 'models/User.php';
-Class ControllerUser {
+require_once 'views/backend/ViewsManager.php';
 
-    private $UserManager;
-    private $User;
+class ControllerUser {
+
+    private $userManager;
+    private $user;
 
     public function __construct()
     {
-        $this->UserManager = new UserManager();
+        $this->userManager = new UserManager();
 
     }
 
     //login
-    function login (){
-        if ($this->request->data){
-            $data = $this->request->data;
-            $data->password = sha1($data->password);
-            $this->loadModels ('User');
-            $user = $this->User->findFirst(array('conditions'=> array('login' => $data->login, 'password' => $data->password)));
+    public function postLogin (){
 
-            if (!empty($user)){
-                $_SESSION['auth']==true;
-                header('location : index?action=admin');
-            }
-             $this->request->data->password = '';
+        $user = $this->userManager->findFirst($_POST['pseudo']);
 
+        if( $user->getPassword() === sha1($_POST['password']))
+        {
+            $_SESSION['pseudo']= $user->getPseudo();
+            $_SESSION['password']= $user->getPassword();
 
+            // Ok la connexion est bonne
+            header('location: index.php?action=admin');
+        } else {
+            // mdp ou ident incorrect
+            header('location: index.php?action=login');
+
+            echo 'b';
         }
     }
 
-    //logout, deconnexion
-    function logout(){
+    public function login(){
+        $vue = new ViewsManager("user", "Connexion");
+        $vue->generer();
+    }
 
-        unset($_SESSION['User']);
-        $this->Session->setFlash('Vous etes maintenant deconnecté');
-        header('location:index.php');
+    //logout, deconnexion
+    public function logout(){
+
+
+        session_unset();
+        session_destroy();
+        header('location: index.php?action=login');
 
     }
 }

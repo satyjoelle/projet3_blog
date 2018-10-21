@@ -22,7 +22,7 @@
 
             <div class="jumbotron jumbotron-fluid">
                 <header class="text-center">
-                    <a href="index.php"> <h1 id="titleBlog"> </h1></a>
+                    <a href="index.php"> <h1 id="titleBlog"> </h1></a> <a href="index.php?action=logout" class="text-right"> Déconnexion</a>
                     <p>Bienvenue sur Mon Blog </p>
                 </header>
             </div>

@@ -6,8 +6,7 @@ require_once 'controllers/frontend/ControllerBillet.php';
 require_once 'controllers/backend/ControllerUser.php';
 require_once 'Views/frontend/Vue.php';
 require_once 'Views/backend/ViewsManager.php';
-require_once 'Views/backend/vueUser.php';
-//require_once 'Backend/Views/Vue.php';
+
 
 
 class Router {
@@ -33,13 +32,22 @@ class Router {
                         $idBillet = intval($_GET['id']);
                         if ($idBillet != 0) {
                             $this->ctrlBillet->billet($idBillet);
-                        }
-                        else
+                        } else {
                             throw new Exception("Identifiant de billet non valide");
+                        }
                     }
-
-                    else
+                    else {
                         throw new Exception("Identifiant de billet non défini");
+                    }
+                }
+                elseif ($_GET['action'] == 'login') {
+                    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+                        $this->ctrlUser->postLogin();
+                    } else {
+                        $this->ctrlUser->login();
+                    }
+                }elseif ($_GET['action'] == 'logout'){
+                    $this->ctrlUser->logout();
                 }
                 else if ($_GET['action'] == 'commenter') {
                     $author = $this->getParametre($_POST, 'author');
@@ -72,15 +80,7 @@ class Router {
                             $this->ctrlAdmin->edit($idBillet);
                         }
 
-                        //connexion
-                        elseif ($_GET['action']=='InsertUser'){
-                            if (isset($_GET['User'])){
-                                $User =intval($_GET['user']);
-                                if ($User !=0){
-                                    $this->ctrlUser->InsertUser($User);
-                                }
-                            }
-                        }
+
 
 
                         else

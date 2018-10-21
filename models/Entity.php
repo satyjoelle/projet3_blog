@@ -11,15 +11,17 @@ abstract class Entity
 
     protected $id;
 
-    public function __construct($datas=null)
+   public function __construct($datas=null)
     {
-        $this->hydrate($datas);
+        if($datas !== null) {
+            $this->hydrate($datas);
+        }
     }
 
     /** @param array $donnees
     * @return void
     */
-    public function hydrate(array $donnees)
+   public function hydrate(array $donnees)
     {
         foreach ($donnees as $key => $value)
         {

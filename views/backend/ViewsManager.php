@@ -21,7 +21,7 @@ class ViewsManager {
 
 
     // Génère et affiche la vue
-    public function generer($donnees) {
+    public function generer($donnees = null) {
         $contenu = $this->genererFichier($this->fichier, $donnees);
         $vue = $this->genererFichier('views/backend/TemplateBackend.php',
             array('title' => $this->title, 'contenu' => $contenu));
@@ -29,9 +29,9 @@ class ViewsManager {
     }
 
     // Génère un fichier vue et renvoie le résultat produit
-    private function genererFichier($fichier, $donnees) {
+    private function genererFichier($fichier, $donnees = null) {
         if (file_exists($fichier)) {
-            extract($donnees);
+            if($donnees != null)extract($donnees);
             ob_start();
             require $fichier;
             return ob_get_clean();

@@ -16,10 +16,13 @@ Class Commentaire extends Entity {
     private $signaled;
     private $id_billet;
 
-   /*public function __construct($datas)
+    public function __construct(array $datas = null)
     {
-        parent::__construct($datas);
-    }*/
+        if($datas !== null)
+        {
+            parent::__construct($datas);
+        }
+    }
 
     /**
      * @return mixed

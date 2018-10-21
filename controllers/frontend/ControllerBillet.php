@@ -1,5 +1,4 @@
-<?php
-
+<?php //phpinfo();
 require_once 'models/BilletManager.php';
 require_once 'models/CommentaireManager.php';
 require_once 'models/Commentaire.php';
@@ -27,17 +26,21 @@ class ControllerBillet{
     // Ajouter un commentaire à un billet
     public function commenter($author, $comment, $idBillet) {
         //var_dump($_POST);
-        $commentaire = new Commentaire();
-
-        $commentaire->setAuthor($author);
-        $commentaire->setComment($comment);
-        $commentaire->setIdBillet($idBillet);
+        $commentaire = new Commentaire(['author'=>$author, 'comment'=>$comment, 'idBillet'=>$idBillet]);
 
         //sauvegarde du commentaire
         $this->commentaireManager->addComment($commentaire);
 
+
+
+
         //actualisation de l'affichage du billet
-        header('location:index.php?action=billet&id='+$idBillet);
+       //header('location:index.php?action=billet&id='+$idBillet);
+
+// Actualisation de l'affichage du billet
+        $this->billet($idBillet);
+
+
 
 
 

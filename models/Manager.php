@@ -6,6 +6,7 @@
  * Time: 23:14
  */
 
+
 abstract class Manager
 {
 

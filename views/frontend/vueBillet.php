@@ -16,6 +16,7 @@
 <?php  foreach ($commentaires as $commentaire):  ?>
     <p><?= $commentaire->getAuthor(); ?> dit :</p>
     <p><?= $commentaire->getComment(); ?></p>
+
 <?php endforeach; ?>
 
 
