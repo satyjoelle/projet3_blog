@@ -12,13 +12,10 @@ class ViewsManager {
    // private $fichier2;
     private $title;
 
-    public function __construct($action) {
-
+    public function __construct($action, $title) {
+            $this->title = $title;
             $this->fichier = "views/backend/vue" . $action . ".php";
-
-
     }
-
 
     // Génère et affiche la vue
     public function generer($donnees = null) {

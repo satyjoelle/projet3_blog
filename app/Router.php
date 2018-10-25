@@ -4,6 +4,7 @@ require_once 'controllers/backend/ControllerAdmin.php';
 require_once 'controllers/frontend/ControllerAccueil.php';
 require_once 'controllers/frontend/ControllerBillet.php';
 require_once 'controllers/backend/ControllerUser.php';
+require_once 'controllers/backend/ControllerCommentaireAdmin.php';
 require_once 'Views/frontend/Vue.php';
 require_once 'Views/backend/ViewsManager.php';
 
@@ -15,12 +16,16 @@ class Router {
     private $ctrlBillet;
     private $ctrlAdmin;
     private $ctrlUser;
+    private $ctrCommentaireAdmin;
+
 
     public function __construct() {
         $this->ctrlAccueil = new ControllerAccueil();
         $this->ctrlBillet = new ControllerBillet();
         $this->ctrlAdmin = new ControllerAdmin();
         $this->ctrlUser = new ControllerUser();
+        $this->ctrCommentaireAdmin = new ControllerCommentaireAdmin();
+
     }
 
     // Traite une requête entrante
@@ -55,8 +60,22 @@ class Router {
                     $idBillet = $this->getParametre($_POST, 'idBillet');
                     $this->ctrlBillet->commenter($author, $comment, $idBillet);
                 }
+                else if ($_GET['action'] == 'signaled') {
+                    $id = $this->getParametre($_POST, 'id');
+                    $signaled = $this->getParametre($_POST, 'signaled');
+                    $this->ctrCommentaireAdmin->signaledComment($id, $signaled);
+
+                    header('Location:index.php');
+
+
+                }
                 else if($_GET['action']=='admin'){
                     $this->ctrlAdmin->admin();
+                    $this->ctrCommentaireAdmin->adminComment();
+                    //$this->ctrCommentaireAdmin->signaledComment();
+
+
+
                 }
                 else if($_GET['action']=='addForm'){
                     $this->ctrlAdmin->addForm();

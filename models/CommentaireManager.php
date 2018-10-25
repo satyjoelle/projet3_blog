@@ -23,6 +23,29 @@ class CommentaireManager extends Manager
 
     }
 
+    public function listComments ()
+    {
+        $sql = "SELECT * FROM commentaires ";
+        $req = $this->db->prepare($sql);
+        $req->execute();
+        $req->setFetchMode(PDO::FETCH_CLASS, "Commentaire");
+        $commentaires = $req->fetchAll();
+        //var_dump($commentaires);
+        return $commentaires;
+    }
+
+    public function updateComments(Commentaire $commentaire)
+    {
+
+            $q = $this->db->prepare('UPDATE commentaires SET signaled = :signaled WHERE id = :id');
+
+            $q->bindValue(':signaled', $commentaire->getSignaled(), PDO::PARAM_STR);
+            $q->bindValue(':id', $commentaire->getId(), PDO::PARAM_INT);
+            $q->execute();
+
+    }
+
+
 
 public function addComment(Commentaire $commentaire)
     {
@@ -34,7 +57,11 @@ public function addComment(Commentaire $commentaire)
     }
 
 
-
+    public function deleteComments($idBillet)
+    {
+        $q = $this->db->prepare('DELETE FROM commentaire WHERE id=' . $idBillet);
+        $q->execute();
+    }
 
 
 

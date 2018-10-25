@@ -49,7 +49,6 @@ class BilletManager extends Manager
     }
 
     //Mise à jour de billets
-
     public function edit(Billet $billet, $idBillet)
     {
         $q = $this->db->prepare('UPDATE billets SET title = :title, post = :post WHERE id = :id');

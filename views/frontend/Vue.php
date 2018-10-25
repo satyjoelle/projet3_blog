@@ -9,14 +9,12 @@
 class Vue {
 
     private $fichier;
-   // private $fichier2;
     private $title;
 
     public function __construct($action) {
 
             $this->fichier = "views/frontend/vue" . $action . ".php";
 
-            //$this->fichier2 = "Backend/Views/vue" . $action . ".php";
 
     }
 

@@ -22,12 +22,16 @@
             <td> <?= $billet->getTitle(); ?> </td>
             <td> <?= $billet->getPost(); ?> </td>
             <td> <?= $billet->getDateCreated(); ?> </td>
-            <td>
-                <a href="<?= "index.php?action=edit&id=" . $billet->getId(); ?>"> <span class="glyphicon glyphicon-pencil btn btn-success"></span> </a>
-                <a href="<?= "index.php?action=delete&id=" . $billet->getId(); ?>"> <span class="glyphicon glyphicon-trash btn btn-danger"></span> </a>
-            </td>
+                    <td>
+                        <a href="<?= "index.php?action=edit&id=" . $billet->getId(); ?>"> <span class="glyphicon glyphicon-pencil btn btn-success"></span> </a>
+                        <a href="<?= "index.php?action=delete&id=" . $billet->getId(); ?>"> <span class="glyphicon glyphicon-trash btn btn-danger"></span> </a>
+                    </td>
         </tr>
     <?php endforeach; ?>
+
+
+
+
 
     </tbody>
 
