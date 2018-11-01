@@ -15,6 +15,7 @@ Class Commentaire extends Entity {
     private $date_comment;
     private $signaled;
     private $id_billet;
+    private $titleBillet;
 
     public function __construct(array $datas = null)
     {
@@ -30,6 +31,16 @@ Class Commentaire extends Entity {
     public function getIdBillet()
     {
         return $this->id_billet;
+    }
+
+    public function getTitleBillet()
+    {
+        return $this->titleBillet;
+    }
+
+    public function setTitleBillet($tbillet)
+    {
+        $this->titleBillet = $tbillet;
     }
 
     /**

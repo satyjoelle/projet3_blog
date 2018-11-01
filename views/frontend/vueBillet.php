@@ -29,17 +29,12 @@
         <input type="hidden" name="signaled" id=""  value="<?= $commentaire->getSignaled(); ?>">
        <button class="btn btn-warning" type="submit" class="btn btn-default">Signaler</button>
     </form>
-
 <?php endforeach; ?>
-
-
-
 
 <form method="post" action="index.php?action=commenter">
     <input id="auteur" name="author" type="text" placeholder="Votre pseudo"
            required /><br />
-    <textarea id="txtCommentaire" name="comment" rows="4"
-              placeholder="Votre commentaire" required></textarea><br />
+    <textarea  name="comment" rows="4" placeholder="Votre commentaire" required></textarea><br />
     <input type="hidden" name="idBillet" value="<?= $billet->getId(); ?>" />
     <input type="submit" value=" Valider votre commentaire" />
 </form>

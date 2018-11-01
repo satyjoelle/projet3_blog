@@ -28,21 +28,20 @@ class ControllerUser {
             // Ok la connexion est bonne
             header('location: index.php?action=admin');
         } else {
-            // mdp ou ident incorrect
+            // mdp ou identifiant incorrect
             header('location: index.php?action=login');
 
-            echo 'b';
+
         }
     }
 
     public function login(){
-        $vue = new ViewsManager("user", "Connexion");
+        $vue = new ViewsManager("user", " Connexion ");
         $vue->generer();
     }
 
     //logout, deconnexion
     public function logout(){
-
 
         session_unset();
         session_destroy();

@@ -9,7 +9,6 @@
 class ViewsManager {
 
     private $fichier;
-   // private $fichier2;
     private $title;
 
     public function __construct($action, $title) {

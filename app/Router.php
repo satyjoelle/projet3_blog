@@ -16,7 +16,7 @@ class Router {
     private $ctrlBillet;
     private $ctrlAdmin;
     private $ctrlUser;
-    private $ctrCommentaireAdmin;
+    private $ctrlCommentaireAdmin;
 
 
     public function __construct() {
@@ -24,7 +24,7 @@ class Router {
         $this->ctrlBillet = new ControllerBillet();
         $this->ctrlAdmin = new ControllerAdmin();
         $this->ctrlUser = new ControllerUser();
-        $this->ctrCommentaireAdmin = new ControllerCommentaireAdmin();
+        $this->ctrlCommentaireAdmin = new ControllerCommentaireAdmin();
 
     }
 
@@ -63,18 +63,27 @@ class Router {
                 else if ($_GET['action'] == 'signaled') {
                     $id = $this->getParametre($_POST, 'id');
                     $signaled = $this->getParametre($_POST, 'signaled');
-                    $this->ctrCommentaireAdmin->signaledComment($id, $signaled);
-
+                    $this->ctrlCommentaireAdmin->signaledComment($id, $signaled);
                     header('Location:index.php');
-
-
                 }
+
+                //SUPPRIMER SIGNALED
+                else if($_GET['action']=='deleteComment'){
+                    if (isset($_GET['id'])) {
+                        $id = intval($_GET['id']);
+                        if ($id != 0) {
+                            $this->ctrlCommentaireAdmin->deleteComment($id);
+
+                        }
+
+                        else
+                            throw new Exception("Identifiant de billet non valide");
+                    }
+                }
+
                 else if($_GET['action']=='admin'){
                     $this->ctrlAdmin->admin();
-                    $this->ctrCommentaireAdmin->adminComment();
-                    //$this->ctrCommentaireAdmin->signaledComment();
-
-
+                    $this->ctrlCommentaireAdmin->adminComment();
 
                 }
                 else if($_GET['action']=='addForm'){
@@ -86,21 +95,21 @@ class Router {
                         $idBillet = intval($_GET['id']);
                         if ($idBillet != 0) {
                             $this->ctrlAdmin->delete($idBillet);
+
                         }
 
                         else
                             throw new Exception("Identifiant de billet non valide");
                     }
                 }
+
+
                 else if($_GET['action']=='edit'){
                     if (isset($_GET['id'])) {
                         $idBillet = intval($_GET['id']);
                         if ($idBillet != 0) {
                             $this->ctrlAdmin->edit($idBillet);
                         }
-
-
-
 
                         else
                             throw new Exception("Identifiant de billet non valide");

@@ -14,10 +14,7 @@ class Vue {
     public function __construct($action) {
 
             $this->fichier = "views/frontend/vue" . $action . ".php";
-
-
     }
-
 
     // Génère et affiche la vue
     public function generer($donnees) {

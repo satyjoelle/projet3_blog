@@ -3,6 +3,7 @@
 require_once 'models/BilletManager.php';
 require_once 'views/backend/ViewsManager.php';
 require_once 'models/Billet.php';
+require_once 'models/CommentaireManager.php';
 class ControllerAdmin
 {
 
@@ -11,12 +12,14 @@ class ControllerAdmin
     public function __construct()
     {
         $this->billetManager = new BilletManager();
+        $this->commentaireManager = new CommentaireManager();
+
     }
 
     // Affiche la liste de tous les billets du blog
     public function admin()
     {
-        if (isset($_SESSION['pseudo']) && isset($_SESSION['password'])) {
+        if ($this->billetManager->verif()) {
 
             $billets = $this->billetManager->getBillets();
             $vue = new ViewsManager("admin", "Bienvenue sur mon site");
@@ -28,23 +31,27 @@ class ControllerAdmin
 
     }
 
+
+//modifier un billet
     public function edit($idBillet)
     {
-        if (isset($_SESSION['pseudo']) && isset ($_SESSION['password'])) {
+        if ($this->billetManager->verif()) {
 
 
             if (isset($_POST ['submit'])) {
 
-                $billet = new Billet(['title' => null, 'post' => null]);
+                $title = $_POST['title'];
+                $post = $_POST['post'];
+                $billet = new Billet(['title' => $title, 'post' => $post]);
 
-                //var_dump($_POST);
+
                 $billet->setTitle($_POST['title']);
                 $billet->setPost($_POST['post']);
                 $this->billetManager->edit($billet, $idBillet);
-
                 header('location: index.php?action=admin');
 
             } else {
+                //formulaire de modification du billet
                 $billet = $this->billetManager->getBillet($idBillet);
                 $vue = new ViewsManager("edit", "Afficher un billet");
                 $vue->generer(array('billet' => $billet));
@@ -59,19 +66,19 @@ class ControllerAdmin
 
 //ajout de billet
     public function addForm() {
-        if (isset($_SESSION['pseudo']) && isset ($_SESSION['password'])) {
+        if ($this->billetManager->verif()) {
             if (isset($_POST['submit'])) {
-                var_dump($_POST);
+
                 $title = $_POST['title'];
                 $post = $_POST['post'];
                 $billet = new Billet(['title' => $title, 'post' => $post]);
 
-                //sauvegarde du commentaire
                 $this->billetManager->addBillet($billet);
                 header('location: index.php?action=admin');
-                //actualisation de l'affichage du billet
+
 
             } else {
+                //formulaire ajout du billet
                 $vue = new ViewsManager("addForm", "Bienvenue sur mon site");
                 $vue->generer(array());
             }
@@ -83,17 +90,24 @@ class ControllerAdmin
 
     public function delete($idBillet)
     {
-        if (isset($_SESSION['pseudo']) && isset ($_SESSION['password'])) {
+        if ($this->billetManager->verif()) {
             $this->billetManager->deleteBillet($idBillet);
+            //supprimer le commentaire avec le billet
+            $this->commentaireManager->deleteCommentsLinkedToAPost($idBillet);
             header('Location:index.php?action=admin');
 
         }else {
 
             header( 'location: index.php?action=login');
 
-    }
+        }
+
+
 
     }
+
 
 }
+
+
 

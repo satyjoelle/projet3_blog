@@ -23,46 +23,49 @@ class CommentaireManager extends Manager
 
     }
 
+    //afficher les commentaires avec son billet
     public function listComments ()
     {
-        $sql = "SELECT * FROM commentaires ";
+        $sql = "SELECT c.*, b.title as titleBillet FROM commentaires c, billets b WHERE c.id_billet = b.id ";
         $req = $this->db->prepare($sql);
         $req->execute();
         $req->setFetchMode(PDO::FETCH_CLASS, "Commentaire");
         $commentaires = $req->fetchAll();
-        //var_dump($commentaires);
         return $commentaires;
     }
 
+
+    //ajout des commentaires
+    public function addComment(Commentaire $commentaire)
+    {
+        $sql = 'insert into commentaires(author, comment, id_billet)' . ' values( ?, ?, ?)';
+        $req = $this->db->prepare($sql);
+        $req->execute(array($commentaire->getAuthor(), $commentaire->getComment(), (int)$commentaire->getIdBillet()));
+
+    }
+
+    //mise à jour des commentaires signalés
     public function updateComments(Commentaire $commentaire)
     {
 
             $q = $this->db->prepare('UPDATE commentaires SET signaled = :signaled WHERE id = :id');
-
             $q->bindValue(':signaled', $commentaire->getSignaled(), PDO::PARAM_STR);
             $q->bindValue(':id', $commentaire->getId(), PDO::PARAM_INT);
             $q->execute();
 
     }
 
-
-
-public function addComment(Commentaire $commentaire)
+//supprimer des commentaires signalés
+    public function deleteComment($id)
     {
-        $sql = 'insert into commentaires(author, comment, id_billet)' . ' values( ?, ?, ?)';
-        $req = $this->db->prepare($sql);
-        $req->execute(array($commentaire->getAuthor(), $commentaire->getComment(), (int)$commentaire->getIdBillet()));
-
-
-    }
-
-
-    public function deleteComments($idBillet)
-    {
-        $q = $this->db->prepare('DELETE FROM commentaire WHERE id=' . $idBillet);
+        $q = $this->db->prepare('DELETE FROM commentaires WHERE id=' . $id);
         $q->execute();
     }
 
 
-
+    public function deleteCommentsLinkedToAPost($idbillet)
+    {
+        $q = $this->db->prepare('DELETE FROM commentaires WHERE id_billet=' . $idbillet);
+        $q->execute();
+    }
 }

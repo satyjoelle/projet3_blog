@@ -6,7 +6,7 @@ require_once 'models/Commentaire.php';
 Class ControllerCommentaireAdmin
 {
 
-    private $CommentaireManager;
+    private $commentaireManager;
     private $Commentaire;
 
     public function __construct()
@@ -19,11 +19,10 @@ Class ControllerCommentaireAdmin
     public function adminComment()
     {
 
-        if (isset($_SESSION['pseudo']) && isset ($_SESSION['password'])) {
+        if ($this->commentaireManager->verif()) {
 
             $commentSignaled = $this->commentaireManager->listComments();
             $vue = new ViewsManager("adminComment", "Nos Commentaires");
-            //var_dump($commentSignaled);
              $vue->generer(array('title' =>  "Affichage des commentaires", 'commentSignaled' => $commentSignaled));
         } else {
 
@@ -32,35 +31,37 @@ Class ControllerCommentaireAdmin
         }
     }
 
-    public function signaledComment( $id, $signaled)
+    public function signaledComment($id, $signaled)
     {
 
-        if (isset($_SESSION ['pseudo']) && isset($_SESSION['password'])) {
-
-          //var_dump($_POST);
+        if ($this->commentaireManager->verif()) {
 
             $commentaire = new commentaire([ 'id'=>$id, 'signaled' => $signaled]);
             $commentaire->setSignaled(1);
              $this->commentaireManager->updateComments($commentaire);
-           // $vue = new  ViewsManager("signaledComment", "Commentaires signalés");
-            //var_dump($Signaled)
-            //$vue->generer(array('title' => "Affichage des commentaires signalés", 'Signaledcomment0' => $Signaled));
 
         }else{
 
             header('location: index.php?action=login');
 
+        }
+    }
+
+    public function deleteComment($id)
+    {
+        if ($this->commentaireManager->verif()){
+
+            $this->commentaireManager->deleteComment($id);
+            header('Location:index.php?action=admin');
+
+        }else{
+            header('Location: index.php?action=login');
+
 
         }
     }
 
-
-
-
-
 }
-
-
 
 
 

@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: faveu
- * Date: 24/09/2018
- * Time: 00:45
- */
+
 Class User extends Entity{
 
     private $pseudo;

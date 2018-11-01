@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdadcb27-d605-4d53-8551-942e082ef01f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/backend/vueAdminComment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Views/VueBillet.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Views/VueErreur.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/frontend/ControllerBillet.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/frontend/ControllerBillet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/BilletManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/BilletManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/backend/ControllerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/backend/ControllerAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/backend/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/backend/ControllerUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Commentaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Commentaire.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/CommentaireManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/CommentaireManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/backend/TemplateBackend.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/backend/TemplateBackend.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/backend/ViewsManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/backend/ViewsManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/backend/vueAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/backend/vueAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/backend/vueAdminComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/backend/vueAdminComment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/frontend/Template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/frontend/Template.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/frontend/Vue.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/frontend/Vue.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/frontend/vueBillet.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/frontend/vueBillet.php" afterDir="false" />
@@ -27,7 +30,7 @@
     <session id="-1011299484">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="29" />
+          <entry key="project.closed" value="30" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.13" value="1" />
@@ -38,35 +41,42 @@
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.40" value="3" />
-          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.42" value="3" />
           <entry key="project.open.time.43" value="4" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.45" value="4" />
-          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.46" value="2" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.57" value="2" />
+          <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.81" value="1" />
-          <entry key="project.opened" value="38" />
+          <entry key="project.open.time.92" value="1" />
+          <entry key="project.opened" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="php" value="753" />
+          <entry key="php" value="915" />
+          <entry key="rnc" value="1" />
+          <entry key="sql" value="1" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="753" />
+          <entry key="PHP" value="915" />
+          <entry key="RNG Compact" value="1" />
+          <entry key="SQL" value="1" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -74,15 +84,15 @@
         <counts>
           <entry key="dummy" value="40" />
           <entry key="html" value="3" />
-          <entry key="php" value="24074" />
-          <entry key="txt" value="46" />
+          <entry key="php" value="26367" />
+          <entry key="txt" value="95" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="13" />
-          <entry key="PHP" value="24063" />
-          <entry key="PLAIN_TEXT" value="86" />
+          <entry key="PHP" value="26356" />
+          <entry key="PLAIN_TEXT" value="135" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
@@ -96,37 +106,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/CommentaireManager.php">
+        <entry file="file://$PROJECT_DIR$/models/Entity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="457">
+              <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+              <folding>
+                <element signature="e#6#87#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Router.php">
+        <entry file="file://$PROJECT_DIR$/models/BilletManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/frontend/vueBillet.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="84" selection-start-line="28" selection-start-column="84" selection-end-line="28" selection-end-column="84" />
+            <state relative-caret-position="443">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/frontend/ControllerBillet.php">
+        <entry file="file://$PROJECT_DIR$/models/Manager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+            <state relative-caret-position="447">
+              <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/Billet.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="41">
+              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -134,8 +147,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Commentaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="551">
+              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projet_blogecrivain.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerUser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerAdmin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
@@ -143,17 +179,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+            <state relative-caret-position="816">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/backend/vueAdminComment.php">
+        <entry file="file://$PROJECT_DIR$/models/CommentaireManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-62">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="-3">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -178,9 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Backend/Models/Manager.php" />
-        <option value="$PROJECT_DIR$/Frontend/Models/Manager.php" />
-        <option value="$PROJECT_DIR$/Backend/Models/BilletFrontManager.php" />
         <option value="$PROJECT_DIR$/Backend/Models/BilletManager.php" />
         <option value="$PROJECT_DIR$/Frontend/Models/Billet.php" />
         <option value="$PROJECT_DIR$/Frontend/Models/CommentaireFrontManager.php" />
@@ -210,25 +243,28 @@
         <option value="$USER_HOME$/Desktop/projet3_blog.php" />
         <option value="$PROJECT_DIR$/views/frontend/VueAccueil.php" />
         <option value="$PROJECT_DIR$/views/frontend/vueUser.php" />
-        <option value="$PROJECT_DIR$/models/Manager.php" />
         <option value="$PROJECT_DIR$/views/backend/vueUser.php" />
-        <option value="$PROJECT_DIR$/controllers/backend/ControllerAdmin.php" />
         <option value="$PROJECT_DIR$/models/UserManager.php" />
         <option value="$PROJECT_DIR$/models/Entity.php" />
-        <option value="$PROJECT_DIR$/models/Commentaire.php" />
         <option value="$PROJECT_DIR$/views/frontend/Vue.php" />
-        <option value="$PROJECT_DIR$/views/frontend/Template.php" />
-        <option value="$PROJECT_DIR$/views/backend/ViewsManager.php" />
-        <option value="$PROJECT_DIR$/views/backend/TemplateBackend.php" />
         <option value="$PROJECT_DIR$/views/backend/vueAdmin.php" />
-        <option value="$PROJECT_DIR$/models/BilletManager.php" />
-        <option value="$PROJECT_DIR$/models/CommentaireManager.php" />
-        <option value="$PROJECT_DIR$/controllers/backend/ControllerUser.php" />
+        <option value="$PROJECT_DIR$/views/backend/ViewsManager.php" />
         <option value="$PROJECT_DIR$/controllers/frontend/ControllerBillet.php" />
+        <option value="$PROJECT_DIR$/models/User.php" />
+        <option value="$PROJECT_DIR$/views/backend/TemplateBackend.php" />
+        <option value="$PROJECT_DIR$/views/frontend/Template.php" />
         <option value="$PROJECT_DIR$/views/frontend/vueBillet.php" />
-        <option value="$PROJECT_DIR$/app/Router.php" />
-        <option value="$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php" />
+        <option value="$PROJECT_DIR$/models/Billet.php" />
+        <option value="$PROJECT_DIR$/models/Commentaire.php" />
         <option value="$PROJECT_DIR$/views/backend/vueAdminComment.php" />
+        <option value="$PROJECT_DIR$/models/CommentaireManager.php" />
+        <option value="$PROJECT_DIR$/app/Router.php" />
+        <option value="$PROJECT_DIR$/controllers/backend/Controller.php" />
+        <option value="$PROJECT_DIR$/models/BilletManager.php" />
+        <option value="$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php" />
+        <option value="$PROJECT_DIR$/models/Manager.php" />
+        <option value="$PROJECT_DIR$/controllers/backend/ControllerUser.php" />
+        <option value="$PROJECT_DIR$/controllers/backend/ControllerAdmin.php" />
       </list>
     </option>
   </component>
@@ -393,7 +429,12 @@
       <workItem from="1540163631078" duration="79000" />
       <workItem from="1540210913650" duration="21041000" />
       <workItem from="1540287034465" duration="25528000" />
-      <workItem from="1540459925487" duration="17843000" />
+      <workItem from="1540459925487" duration="29971000" />
+      <workItem from="1540566179277" duration="596000" />
+      <workItem from="1540759345892" duration="3192000" />
+      <workItem from="1540819227354" duration="6877000" />
+      <workItem from="1540896303221" duration="13552000" />
+      <workItem from="1541019269905" duration="8047000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout Frontend">
       <created>1539118528106</created>
@@ -437,11 +478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540163706719</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ajout authentification et signalement des commentaires">
+      <created>1540488769247</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1540488769248</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="391825000" />
+    <option name="totallyTimeSpent" value="436217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -449,7 +497,7 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.2602118" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.28290468" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -479,12 +527,10 @@
     <MESSAGE value="Ajout Frontend plus" />
     <MESSAGE value="Ajout Backend" />
     <MESSAGE value="Ajout Authentification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout Authentification" />
+    <MESSAGE value="Ajout authentification et signalement des commentaires" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout authentification et signalement des commentaires" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/app/Backend/Config/app.php" />
-    <entry file="file://$PROJECT_DIR$/Views/VueAccueil.php" />
-    <entry file="file://$PROJECT_DIR$/Backend/Controllers/BackController.php" />
     <entry file="file://$PROJECT_DIR$/Views/Vue.php" />
     <entry file="file://$PROJECT_DIR$/app/app/Backend/Config/routes.php" />
     <entry file="file://$PROJECT_DIR$/Backend/Connexion/Connexion.html" />
@@ -511,6 +557,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/frontend/vueUser.php" />
+    <entry file="file://$PROJECT_DIR$/views/backend/vueCommentaire.php" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -518,7 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/vueCommentaire.php" />
     <entry file="file://$PROJECT_DIR$/models/UserManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -526,83 +572,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Billet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Manager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/User.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/frontend/Template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/TemplateBackend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/ViewsManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/vueUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/frontend/Vue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/BilletManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/vueAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="159" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="159" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/vueAddForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/frontend/VueAccueil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="79" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -613,6 +586,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/core-scripting.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backend/vueAddForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backend/vueUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/frontend/vueBillet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/frontend/VueAccueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backend/TemplateBackend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/frontend/Template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/backend/vueEdit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -620,82 +642,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Entity.php">
+    <entry file="file://$PROJECT_DIR$/views/backend/vueAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/frontend/ControllerAccueil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/frontend/ControllerBillet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Commentaire.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/CommentaireManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/backend/vueAdminComment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/frontend/vueBillet.php">
+    <entry file="file://$PROJECT_DIR$/views/frontend/Vue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="84" selection-start-line="28" selection-start-column="84" selection-end-line="28" selection-end-column="84" />
+        <state relative-caret-position="102">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/frontend/ControllerBillet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="45" lean-forward="true" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backend/ViewsManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/frontend/ControllerAccueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Entity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/BilletManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/CommentaireManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/backend/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Manager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Billet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Commentaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projet_blogecrivain.sql">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

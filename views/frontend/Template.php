@@ -16,6 +16,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="Contenu/style.css" />
+
+
+
     <title> <?= $title ?> </title>
 
 
@@ -42,16 +45,9 @@
                             <li class="active"><a href="#"> Contact </a></li>
                         </ul>
 
-
-
                         </div>
 
-
                 </header>
-
-
-
-
 
             <div id="post">
                 <?= $contenu ?>
