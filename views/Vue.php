@@ -13,13 +13,19 @@ class Vue {
 
     public function __construct($action) {
 
-            $this->fichier = "views/frontend/vue" . $action . ".php";
+       $this->fichier= "views/frontend/Vue" . ucfirst($action) . ".php";
+        //$this->fichier= "views/backend/Vue" . ucfirst($action) . ".php";
+
     }
 
-    // Génère et affiche la vue
+    // Génère et affiche les vues
     public function generer($donnees) {
         $contenu = $this->genererFichier($this->fichier, $donnees);
+
         $vue = $this->genererFichier('views/frontend/Template.php',
+           array('title' => $this->title, 'contenu' => $contenu));
+
+        $vue = $this->genererFichier('views/backend/TemplateBackend.php',
             array('title' => $this->title, 'contenu' => $contenu));
         echo $vue;
     }

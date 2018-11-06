@@ -1,7 +1,7 @@
 <?php
 
 require_once 'models/BilletManager.php';
-require_once 'Views/frontend/Vue.php';
+require_once 'views/Vue.php';
 
 class ControllerAccueil {
 

@@ -1,7 +1,7 @@
 <?php
 
 require_once 'models/BilletManager.php';
-require_once 'views/backend/ViewsManager.php';
+require_once 'views/Vue.php';
 require_once 'models/Billet.php';
 require_once 'models/CommentaireManager.php';
 class ControllerAdmin
@@ -22,7 +22,7 @@ class ControllerAdmin
         if ($this->billetManager->verif()) {
 
             $billets = $this->billetManager->getBillets();
-            $vue = new ViewsManager("admin", "Bienvenue sur mon site");
+            $vue = new ViewsVue("admin", "Bienvenue sur mon site");
             $vue->generer(array('billets' => $billets));
         } else {
             header('location: index.php?action=login');

@@ -2,7 +2,8 @@
 //session_start();
 require_once 'models/UserManager.php';
 require_once 'models/User.php';
-require_once 'views/backend/ViewsManager.php';
+//require_once 'views/backend/ViewsManager.php';
+require_once 'views/Vue.php';
 
 class ControllerUser {
 
@@ -36,7 +37,7 @@ class ControllerUser {
     }
 
     public function login(){
-        $vue = new ViewsManager("user", " Connexion ");
+        $vue = new viewsVue("user", " Connexion ");
         $vue->generer();
     }
 

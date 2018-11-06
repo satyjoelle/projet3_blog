@@ -1,6 +1,5 @@
 <?php
-//require_once 'Frontend/Views/Vue.php';
-//require_once 'Backend/Views/ViewsManager.php';
+
 
 ?>
 <!doctype html>

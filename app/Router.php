@@ -5,8 +5,9 @@ require_once 'controllers/frontend/ControllerAccueil.php';
 require_once 'controllers/frontend/ControllerBillet.php';
 require_once 'controllers/backend/ControllerUser.php';
 require_once 'controllers/backend/ControllerCommentaireAdmin.php';
-require_once 'Views/frontend/Vue.php';
-require_once 'Views/backend/ViewsManager.php';
+//require_once 'Views/frontend/Vue.php';
+//require_once 'Views/backend/ViewsManager.php';
+require_once 'views/Vue.php';
 
 
 
@@ -35,6 +36,7 @@ class Router {
                 if ($_GET['action'] == 'billet') {
                     if (isset($_GET['id'])) {
                         $idBillet = intval($_GET['id']);
+
                         if ($idBillet != 0) {
                             $this->ctrlBillet->billet($idBillet);
                         } else {

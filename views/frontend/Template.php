@@ -1,7 +1,5 @@
 <?php
-//require_once 'Frontend/Views/Vue.php';
-//require_once 'Backend/Views/ViewsManager.php';
-//require_once 'frontend/vueUser.php';
+
 
 ?>
 <!doctype html>

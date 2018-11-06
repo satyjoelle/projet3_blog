@@ -1,6 +1,6 @@
 <?php
 require_once 'models/CommentaireManager.php';
-require_once 'views/backend/ViewsManager.php';
+require_once 'views/Vue.php';
 require_once 'models/Commentaire.php';
 
 Class ControllerCommentaireAdmin
