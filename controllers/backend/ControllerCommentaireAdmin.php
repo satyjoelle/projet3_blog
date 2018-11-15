@@ -1,6 +1,7 @@
 <?php
+
 require_once 'models/CommentaireManager.php';
-require_once 'views/Vue.php';
+require_once 'views/vue.php';
 require_once 'models/Commentaire.php';
 
 Class ControllerCommentaireAdmin
@@ -11,7 +12,9 @@ Class ControllerCommentaireAdmin
 
     public function __construct()
     {
+
         $this->commentaireManager = new CommentaireManager();
+
     }
 
 //Affiche tous les commentaire du blog
@@ -22,9 +25,10 @@ Class ControllerCommentaireAdmin
         if ($this->commentaireManager->verif()) {
 
             $commentSignaled = $this->commentaireManager->listComments();
-            $vue = new ViewsManager("adminComment", "Nos Commentaires");
-             $vue->generer(array('title' =>  "Affichage des commentaires", 'commentSignaled' => $commentSignaled));
+            $vue = new Vue("backend", "adminComment" ,"Affichage des commentaire");
+             $vue->generer(array( 'commentSignaled' => $commentSignaled));
         } else {
+
 
             header('location: index.php?action=login');
 

@@ -17,7 +17,7 @@
     <tbody>
 
 
-//affichage de tous les commentaires
+<?php//affichage de tous les commentaires?>
     <?php foreach ($commentSignaled as $commentSignaled) : ?>
         <tr>
          <td> <?=$commentSignaled->getId();?>  </td>

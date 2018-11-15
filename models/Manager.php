@@ -24,11 +24,8 @@ abstract class Manager
         if ($this->db == null) {
             //création de la connexion à la bdd
             $this->db = new PDO('mysql:host=localhost;dbname=projet_blogecrivain;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
         }
-
         return $this->db;
-
     }
     public function verif(){
         $secu = (isset($_SESSION['pseudo']) && isset ($_SESSION['password']));

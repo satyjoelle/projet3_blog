@@ -13,14 +13,11 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="../assets/tinymce/tinymce.js" ></script>
     <link rel="stylesheet" href="Contenu/style.css" />
 
 
-
     <title> <?= $title ?> </title>
-
-
-
 
 </head>
 
@@ -30,18 +27,9 @@
             <div class="jumbotron jumbotron-fluid">
                 <header class="text-center">
                     <a href="index.php"> <h1 id="titleBlog"> </h1></a>
-                    <p>Bienvenue sur Mon Blog d'Ecrivain </p>
+                    <p class="btn btn-primary"> Bienvenue sur Mon Blog d'Ecrivain </p>
 
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="#"> Accueil </a></li>
-                            </ul>
 
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="#"> Articles </a></li>
-                            </ul>
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#"> Contact </a></li>
-                        </ul>
 
                         </div>
 

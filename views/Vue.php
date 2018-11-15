@@ -10,30 +10,30 @@ class Vue {
 
     private $fichier;
     private $title;
+    private $app;
 
-    public function __construct($action) {
+    public function __construct($app, $action, $title) {
 
-       $this->fichier= "views/frontend/Vue" . ucfirst($action) . ".php";
-        //$this->fichier= "views/backend/Vue" . ucfirst($action) . ".php";
+        $this->app = $app;
+        $this->fichier= "views/".$this->app."/vue" . ucfirst($action) . ".php";
+        $this->title = $title;
 
     }
 
     // Génère et affiche les vues
-    public function generer($donnees) {
+    public function generer($donnees = null) {
         $contenu = $this->genererFichier($this->fichier, $donnees);
 
-        $vue = $this->genererFichier('views/frontend/Template.php',
-           array('title' => $this->title, 'contenu' => $contenu));
 
-        $vue = $this->genererFichier('views/backend/TemplateBackend.php',
-            array('title' => $this->title, 'contenu' => $contenu));
+        $vue = $this->genererFichier('views/'.$this->app.'/Template.php',
+           array('title' => $this->title, 'contenu' => $contenu));
         echo $vue;
     }
 
     // Génère un fichier vue et renvoie le résultat produit
     private function genererFichier($fichier, $donnees) {
         if (file_exists($fichier)) {
-            extract($donnees);
+            extract((array)$donnees);
             ob_start();
             require $fichier;
             return ob_get_clean();

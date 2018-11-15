@@ -2,7 +2,7 @@
 require_once 'models/BilletManager.php';
 require_once 'models/CommentaireManager.php';
 require_once 'models/Commentaire.php';
-require_once 'views/Vue.php';
+require_once 'views/vue.php';
 
 class ControllerBillet{
 
@@ -19,7 +19,7 @@ class ControllerBillet{
     public function billet($idBillet) {
         $billet = $this->billet->getBillet($idBillet);
         $commentaires = $this->commentaireManager->getComments($idBillet);
-        $vue = new Vue("Billet", "Afficher un billet");
+        $vue = new Vue("frontend", "Billet", "Afficher un billet");
         $vue->generer(array('billet' => $billet, 'commentaires' => $commentaires));
     }
 
