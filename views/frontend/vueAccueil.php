@@ -1,5 +1,5 @@
 
-<?php ($billets); ?>
+
 <?php foreach ($billets as $billet): ?>
     <article>
         <header>

@@ -26,14 +26,17 @@ abstract class Manager
             $this->db = new PDO('mysql:host=localhost;dbname=projet_blogecrivain;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         }
         return $this->db;
+
+
     }
-    public function verif(){
+
+    public function verif()
+    {
         $secu = (isset($_SESSION['pseudo']) && isset ($_SESSION['password']));
         return $secu;
+
+
     }
-
-
-
 }
 
 
