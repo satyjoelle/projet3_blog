@@ -4,6 +4,7 @@ require_once 'models/BilletManager.php';
 require_once 'views/vue.php';
 require_once 'models/Billet.php';
 require_once 'models/CommentaireManager.php';
+require_once 'models/Verification.php';
 
 class ControllerAdmin
 {
@@ -15,13 +16,14 @@ class ControllerAdmin
     {
         $this->billetManager = new BilletManager();
         $this->commentaireManager = new CommentaireManager();
+        $this->verification = new Verification();
 
     }
 
     // Affiche la liste de tous les billets du blog
     public function admin()
     {
-        if ($this->billetManager->verif()) {
+        if ($this->verification->verif()) {
 
             $billets = $this->billetManager->getBillets();
             $vue = new Vue("backend","admin", "Bienvenue sur mon site");
@@ -36,7 +38,7 @@ class ControllerAdmin
 
     //ajout de billet
     public function addForm() {
-        if ($this->billetManager->verif()) {
+        if ($this->verification->verif()) {
             if (isset($_POST['submit'])) {
 
                 $title = $_POST['title'];
@@ -62,7 +64,7 @@ class ControllerAdmin
 //modifier un billet
     public function edit($idBillet)
     {
-        if ($this->billetManager->verif()) {
+        if ($this->verification->verif()) {
 
 
             if (isset($_POST ['submit'])) {
@@ -94,7 +96,7 @@ class ControllerAdmin
 
     public function delete($idBillet)
     {
-        if ($this->billetManager->verif()) {
+        if ($this->verification->verif()) {
             $this->billetManager->deleteBillet($idBillet);
             //supprimer le commentaire avec le billet
             $this->commentaireManager->deleteCommentsLinkedToAPost($idBillet);

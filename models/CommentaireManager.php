@@ -45,12 +45,12 @@ class CommentaireManager extends Manager
     }
 
     //mise à jour des commentaires signalés
-    public function updateComments(Commentaire $commentaire)
+    public function updateComments($id, $signaled)
     {
 
             $q = $this->db->prepare('UPDATE commentaires SET signaled = :signaled WHERE id = :id');
-            $q->bindValue(':signaled', $commentaire->getSignaled(), PDO::PARAM_STR);
-            $q->bindValue(':id', $commentaire->getId(), PDO::PARAM_INT);
+            $q->bindValue(':signaled',1 , PDO::PARAM_STR);
+            $q->bindValue(':id', $id, PDO::PARAM_INT);
             $q->execute();
 
     }
