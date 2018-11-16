@@ -35,8 +35,7 @@ Class ControllerCommentaireAdmin
     public function signaledComment($id, $signaled)
     {
 
-            //$commentaire = new commentaire([ 'id'=>$id, 'signaled' => $signaled]);
-           // $commentaire->setSignaled(1);
+
              $this->commentaireManager->updateComments($id, $signaled);
 
     }
