@@ -63,9 +63,9 @@ class CommentaireManager extends Manager
     }
 
 
-    public function deleteCommentsLinkedToAPost($idbillet)
+   /* public function deleteCommentsLinkedToAPost($idbillet)
     {
         $q = $this->db->prepare('DELETE FROM commentaires WHERE id_billet=' . $idbillet);
         $q->execute();
-    }
+    }*/
 }

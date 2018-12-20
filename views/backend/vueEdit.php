@@ -1,6 +1,6 @@
 
 
-<h2>Formulaire d'édition de billet </h2>
+<h2>Formulaire de modification de Billet </h2>
 <p></p>
 <form action="" method="post">
 

@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdadcb27-d605-4d53-8551-942e082ef01f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/Verification.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/backend/ControllerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/backend/ControllerAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/CommentaireManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/CommentaireManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/backend/vueAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/backend/vueAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/backend/vueAdminComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/backend/vueAdminComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/backend/vueEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/backend/vueEdit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/frontend/vueBillet.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/frontend/vueBillet.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +21,7 @@
     <session id="-1011299484">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="33" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.13" value="1" />
@@ -34,32 +34,32 @@
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.38" value="2" />
-          <entry key="project.open.time.39" value="2" />
+          <entry key="project.open.time.39" value="3" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.40" value="3" />
           <entry key="project.open.time.41" value="2" />
-          <entry key="project.open.time.42" value="4" />
+          <entry key="project.open.time.42" value="5" />
           <entry key="project.open.time.43" value="5" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.45" value="4" />
           <entry key="project.open.time.46" value="2" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.49" value="1" />
-          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.50" value="2" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.57" value="2" />
           <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.81" value="1" />
           <entry key="project.open.time.92" value="1" />
-          <entry key="project.opened" value="48" />
+          <entry key="project.opened" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
           <entry key="js" value="1" />
-          <entry key="php" value="1230" />
+          <entry key="php" value="1412" />
           <entry key="rnc" value="1" />
           <entry key="sql" value="4" />
           <entry key="xml" value="2" />
@@ -69,7 +69,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="1" />
-          <entry key="PHP" value="1230" />
+          <entry key="PHP" value="1412" />
           <entry key="RNG Compact" value="1" />
           <entry key="SQL" value="4" />
           <entry key="XML" value="2" />
@@ -79,15 +79,15 @@
         <counts>
           <entry key="dummy" value="41" />
           <entry key="html" value="3" />
-          <entry key="php" value="27653" />
-          <entry key="txt" value="201" />
+          <entry key="php" value="27988" />
+          <entry key="txt" value="226" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="13" />
-          <entry key="PHP" value="27642" />
-          <entry key="PLAIN_TEXT" value="242" />
+          <entry key="PHP" value="27977" />
+          <entry key="PLAIN_TEXT" value="267" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
@@ -99,7 +99,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -119,25 +119,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Desktop/projet3_blog.php" />
-        <option value="$PROJECT_DIR$/views/frontend/VueAccueil.php" />
-        <option value="$PROJECT_DIR$/views/frontend/vueUser.php" />
-        <option value="$PROJECT_DIR$/views/backend/vueUser.php" />
-        <option value="$PROJECT_DIR$/models/UserManager.php" />
         <option value="$PROJECT_DIR$/models/Entity.php" />
         <option value="$PROJECT_DIR$/views/frontend/Vue.php" />
-        <option value="$PROJECT_DIR$/views/backend/vueAdmin.php" />
         <option value="$PROJECT_DIR$/models/User.php" />
         <option value="$PROJECT_DIR$/models/Billet.php" />
         <option value="$PROJECT_DIR$/models/Commentaire.php" />
         <option value="$PROJECT_DIR$/controllers/backend/Controller.php" />
-        <option value="$PROJECT_DIR$/models/BilletManager.php" />
         <option value="$PROJECT_DIR$/views/backend/ViewsManager.php" />
         <option value="$PROJECT_DIR$/views/backend/TemplateBackend.php" />
         <option value="$PROJECT_DIR$/views/frontend/Template.php" />
         <option value="$PROJECT_DIR$/app/vue.php" />
         <option value="$PROJECT_DIR$/views/vueErreur.php" />
-        <option value="$PROJECT_DIR$/controllers/frontend/ControllerAccueil.php" />
         <option value="$PROJECT_DIR$/controllers/frontend/ControllerBillet.php" />
         <option value="$PROJECT_DIR$/app/Router.php" />
         <option value="$PROJECT_DIR$/views/Vue.php" />
@@ -146,7 +138,6 @@
         <option value="$PROJECT_DIR$/app/controllers/backend/ControllerUser.php" />
         <option value="$PROJECT_DIR$/app/index.php" />
         <option value="$PROJECT_DIR$/views/vue.php" />
-        <option value="$PROJECT_DIR$/views/backend/Template.php" />
         <option value="$USER_HOME$/Downloads/Template.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/Template.php" />
         <option value="$PROJECT_DIR$/views/frontend/vueAccueil.php" />
@@ -159,17 +150,26 @@
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/ControllerUser.php" />
         <option value="$PROJECT_DIR$/Verification.php" />
         <option value="$PROJECT_DIR$/models/Manager.php" />
-        <option value="$PROJECT_DIR$/controllers/backend/ControllerAdmin.php" />
         <option value="$PROJECT_DIR$/models/Verification.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerUser.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/Manager.php" />
-        <option value="$PROJECT_DIR$/views/backend/vueAdminComment.php" />
-        <option value="$PROJECT_DIR$/models/CommentaireManager.php" />
-        <option value="$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php" />
-        <option value="$PROJECT_DIR$/views/frontend/vueBillet.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerAdmin.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerCommentaireAdmin.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/Verification.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerUser.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/CommentaireManager.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/vueBillet.php" />
+        <option value="$PROJECT_DIR$/views/backend/Template.php" />
+        <option value="$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php" />
+        <option value="$PROJECT_DIR$/views/backend/vueAdminComment.php" />
+        <option value="$PROJECT_DIR$/controllers/frontend/ControllerAccueil.php" />
+        <option value="$PROJECT_DIR$/views/backend/vueAdmin.php" />
+        <option value="$PROJECT_DIR$/views/frontend/vueBillet.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerCommentaireAdmin.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/vueAdminComment.php" />
+        <option value="$PROJECT_DIR$/models/BilletManager.php" />
+        <option value="$PROJECT_DIR$/views/backend/vueEdit.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerAdmin.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-1/vueEdit.php" />
+        <option value="$PROJECT_DIR$/controllers/backend/ControllerAdmin.php" />
+        <option value="$PROJECT_DIR$/models/CommentaireManager.php" />
       </list>
     </option>
   </component>
@@ -193,6 +193,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,7 +253,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -348,7 +348,10 @@
       <workItem from="1541505343404" duration="17661000" />
       <workItem from="1542236008553" duration="5244000" />
       <workItem from="1542287684812" duration="23011000" />
-      <workItem from="1542360300999" duration="14930000" />
+      <workItem from="1542360300999" duration="19396000" />
+      <workItem from="1542639108450" duration="8524000" />
+      <workItem from="1542722218621" duration="9527000" />
+      <workItem from="1542909667956" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout Frontend">
       <created>1539118528106</created>
@@ -427,18 +430,32 @@
       <option name="project" value="LOCAL" />
       <updated>1542360800250</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="mise à jour&#10;autres modifs&#10;dernières modifs">
+      <created>1542380231842</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1542380231842</updated>
+    </task>
+    <task id="LOCAL-00013" summary="mise à jour&#10;autres modifs&#10;dernières modifs">
+      <created>1542388879157</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1542388879173</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="498526000" />
+    <option name="totallyTimeSpent" value="521091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5032787" side_tool="true" weight="0.24432677" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4967213" visible="true" weight="0.22012103" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4967213" visible="true" weight="0.22919819" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -493,7 +510,8 @@
     <MESSAGE value="Ajout authentification et signalement des commentaires&#10;suppression des billets&#10;fonction verif pour eviter la duplication" />
     <MESSAGE value="mise à jour" />
     <MESSAGE value="mise à jour&#10;autres modifs" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise à jour&#10;autres modifs" />
+    <MESSAGE value="mise à jour&#10;autres modifs&#10;dernières modifs" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise à jour&#10;autres modifs&#10;dernières modifs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -507,196 +525,100 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/projet_blogecrivain.sql" />
-    <entry file="file://$PROJECT_DIR$/app/index.php" />
-    <entry file="file://$PROJECT_DIR$/app/models/Manager.php" />
-    <entry file="file://$PROJECT_DIR$/assets/tmceScript.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/frontend/Template.php">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Router.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Manager.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/ControllerCommentaireAdmin.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/ControllerAdmin.php" />
+    <entry file="file://$PROJECT_DIR$/models/Verif.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/ControllerUser.php" />
+    <entry file="file://$PROJECT_DIR$/Verification.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/Router.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/Manager.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/UserManager.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerUser.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/Verification.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/CommentaireManager.php" />
+    <entry file="file://$PROJECT_DIR$/ControllerUser.php" />
+    <entry file="file://$PROJECT_DIR$/Manager.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/vueBillet.php" />
+    <entry file="file://$PROJECT_DIR$/models/Manager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="459">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/User.php">
+    <entry file="file://$PROJECT_DIR$/views/frontend/vueErreur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/Template.php">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerCommentaireAdmin.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerBillet.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/vueAdmin.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/vueAdminComment.php" />
+    <entry file="file://$PROJECT_DIR$/models/UserManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+        <state relative-caret-position="187">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/views/backend/Template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="41" />
+        <state relative-caret-position="476">
+          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/vue.php">
+    <entry file="file://$PROJECT_DIR$/views/frontend/Template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="272">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/vueErreur.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="50" lean-forward="true" selection-end-column="50" />
+        <state relative-caret-position="11203">
+          <caret line="659" column="9" selection-start-line="659" selection-start-column="9" selection-end-line="659" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        <state relative-caret-position="415">
+          <caret line="83" column="69" selection-start-line="83" selection-start-column="69" selection-end-line="83" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/frontend/ControllerAccueil.php">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/vueEdit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="34">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/vueAddForm.php">
+    <entry file="file://$PROJECT_DIR$/views/backend/vueAdminComment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/vueEdit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/vueUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/frontend/vueAccueil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Verif.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Verification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/BilletManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-628" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/Manager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/ControllerCommentaireAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/ControllerAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Verif.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/ControllerUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Entity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        <state relative-caret-position="357">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Verification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manager.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Billet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="56" column="20" lean-forward="true" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/vueAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/BilletManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="942">
-          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+        <state relative-caret-position="357">
+          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -707,118 +629,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Manager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/UserManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/Router.php">
+    <entry file="file://$PROJECT_DIR$/models/User.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerUser.php">
+    <entry file="file://$PROJECT_DIR$/views/vue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        <state relative-caret-position="296">
+          <caret line="24" column="67" lean-forward="true" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/views/vueErreur.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/frontend/ControllerBillet.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        <state relative-caret-position="85">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/CommentaireManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/Manager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="169">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/frontend/vueBillet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="29" column="101" selection-start-line="29" selection-start-column="101" selection-end-line="29" selection-end-column="101" />
+        <state relative-caret-position="309">
+          <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/backend/vueAdminComment.php">
+    <entry file="file://$PROJECT_DIR$/models/BilletManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="918">
+          <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/frontend/ControllerBillet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/frontend/ControllerAccueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Verification.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1982">
-          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="45" column="36" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/ControllerCommentaireAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/Verification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="1683">
+          <caret line="99" column="34" lean-forward="true" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backend/vueEdit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backend/vueAddForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backend/vueAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerCommentaireAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="45" lean-forward="true" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/backend/ControllerUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backend/vueUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/frontend/vueAccueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

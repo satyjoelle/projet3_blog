@@ -27,7 +27,7 @@ Class ControllerCommentaireAdmin
     {
 
             $commentSignaled = $this->commentaireManager->listComments();
-            $vue = new Vue("backend", "adminComment" ,"Affichage des commentaire");
+            $vue = new Vue("backend", "adminComment" ,"Affichage des commentaire signalés");
              $vue->generer(array( 'commentSignaled' => $commentSignaled));
 
     }

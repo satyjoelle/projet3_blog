@@ -27,9 +27,11 @@
     <form action="index.php?action=signaled" method="post">
         <input type="hidden" name="id" id="" class="" value="<?= $commentaire->getId(); ?>">
         <input type="hidden" name="signaled" id=""  value="<?= $commentaire->getSignaled(); ?>">
-       <button class="btn btn-warning" type="submit" onclick="alert('Votre commentaire a été signalé!')">Signaler</button>
+       <button class="btn btn-warning" type="submit" onclick="alert('Votre commentaire a été signalé!')"> Signaler</button>
     </form>
 <?php endforeach; ?>
+
+
 <div class="row col-md-6">
     <h2 class="">Ajoutez votre commentaire</h2>
     <form method="post" action="index.php?action=commenter">

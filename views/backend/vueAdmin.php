@@ -1,7 +1,7 @@
 
 
 
-<h2> Page d'administration des billets </h2>
+<h2> Administration des billets </h2>
 <div> <a href="index.php?action=addForm"> <span class="glyphicon glyphicon-plus btn btn-warning" >  </span> </a> </div>
 <table class="table table-striped">
     <thead>

@@ -81,7 +81,7 @@ class ControllerAdmin
             } else {
                 //formulaire de modification du billet
                 $billet = $this->billetManager->getBillet($idBillet);
-                $vue = new Vue("backend", "edit", "Afficher un billet");
+                $vue = new Vue("backend", "edit", "Modifier un Billet");
                 $vue->generer(array('billet' => $billet));
 
             }
@@ -98,8 +98,9 @@ class ControllerAdmin
     {
         if ($this->verification->verif()) {
             $this->billetManager->deleteBillet($idBillet);
+
             //supprimer le commentaire avec le billet
-            $this->commentaireManager->deleteCommentsLinkedToAPost($idBillet);
+            //$this->commentaireManager->deleteCommentsLinkedToAPost($idBillet);
             header('Location:index.php?action=admin');
 
         }else {
